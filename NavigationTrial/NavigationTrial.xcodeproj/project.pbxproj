@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		ECB9BD221B53E0360099524B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB9BD211B53E0360099524B /* main.m */; };
 		ECB9BD251B53E0360099524B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB9BD241B53E0360099524B /* AppDelegate.m */; };
-		ECB9BD281B53E0360099524B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB9BD271B53E0360099524B /* ViewController.m */; };
 		ECB9BD2B1B53E0360099524B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECB9BD291B53E0360099524B /* Main.storyboard */; };
 		ECB9BD2D1B53E0360099524B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECB9BD2C1B53E0360099524B /* Images.xcassets */; };
 		ECB9BD301B53E0360099524B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECB9BD2E1B53E0360099524B /* LaunchScreen.xib */; };
 		ECB9BD3C1B53E0360099524B /* NavigationTrialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB9BD3B1B53E0360099524B /* NavigationTrialTests.m */; };
+		ECB9BD4A1B53E34B0099524B /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB9BD491B53E34B0099524B /* ModalViewController.m */; };
+		ECB9BD4D1B53E3540099524B /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB9BD4C1B53E3540099524B /* PushViewController.m */; };
+		ECB9BD561B53E8200099524B /* MiddleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB9BD551B53E8200099524B /* MiddleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,18 @@
 		ECB9BD211B53E0360099524B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ECB9BD231B53E0360099524B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ECB9BD241B53E0360099524B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		ECB9BD261B53E0360099524B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		ECB9BD271B53E0360099524B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		ECB9BD2A1B53E0360099524B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECB9BD2C1B53E0360099524B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		ECB9BD2F1B53E0360099524B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		ECB9BD351B53E0360099524B /* NavigationTrialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationTrialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB9BD3A1B53E0360099524B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECB9BD3B1B53E0360099524B /* NavigationTrialTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationTrialTests.m; sourceTree = "<group>"; };
+		ECB9BD481B53E34B0099524B /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		ECB9BD491B53E34B0099524B /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		ECB9BD4B1B53E3530099524B /* PushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
+		ECB9BD4C1B53E3540099524B /* PushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
+		ECB9BD541B53E8200099524B /* MiddleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiddleViewController.h; sourceTree = "<group>"; };
+		ECB9BD551B53E8200099524B /* MiddleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiddleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +89,12 @@
 			children = (
 				ECB9BD231B53E0360099524B /* AppDelegate.h */,
 				ECB9BD241B53E0360099524B /* AppDelegate.m */,
-				ECB9BD261B53E0360099524B /* ViewController.h */,
-				ECB9BD271B53E0360099524B /* ViewController.m */,
+				ECB9BD481B53E34B0099524B /* ModalViewController.h */,
+				ECB9BD491B53E34B0099524B /* ModalViewController.m */,
+				ECB9BD4B1B53E3530099524B /* PushViewController.h */,
+				ECB9BD4C1B53E3540099524B /* PushViewController.m */,
+				ECB9BD541B53E8200099524B /* MiddleViewController.h */,
+				ECB9BD551B53E8200099524B /* MiddleViewController.m */,
 				ECB9BD291B53E0360099524B /* Main.storyboard */,
 				ECB9BD2C1B53E0360099524B /* Images.xcassets */,
 				ECB9BD2E1B53E0360099524B /* LaunchScreen.xib */,
@@ -219,9 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECB9BD281B53E0360099524B /* ViewController.m in Sources */,
+				ECB9BD4A1B53E34B0099524B /* ModalViewController.m in Sources */,
+				ECB9BD4D1B53E3540099524B /* PushViewController.m in Sources */,
 				ECB9BD251B53E0360099524B /* AppDelegate.m in Sources */,
 				ECB9BD221B53E0360099524B /* main.m in Sources */,
+				ECB9BD561B53E8200099524B /* MiddleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +428,7 @@
 				ECB9BD411B53E0360099524B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECB9BD421B53E0360099524B /* Build configuration list for PBXNativeTarget "NavigationTrialTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +437,7 @@
 				ECB9BD441B53E0360099524B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

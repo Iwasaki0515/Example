@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MiddleViewController.h
 //  NavigationTrial
 //
 //  Created by merge on 2015/07/13.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MiddleViewController : UIViewController
 
+
+-(void)close;
 
 @end
-

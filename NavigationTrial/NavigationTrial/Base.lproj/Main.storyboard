@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Modal View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ModalViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -16,14 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKw-1m-gde">
-                                <rect key="frame" x="282" y="292" width="87" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKw-1m-gde">
+                                <rect key="frame" x="256.5" y="285" width="87" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9nt-dp-WFP"/>
+                                    <constraint firstAttribute="width" constant="87" id="ACY-oe-nzm"/>
+                                </constraints>
                                 <state key="normal" title="modal_close">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="close:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Wuc-Tw-KzD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="JKw-1m-gde" secondAttribute="centerY" id="RdE-wU-vQc"/>
+                            <constraint firstAttribute="centerX" secondItem="JKw-1m-gde" secondAttribute="centerX" id="ecf-UK-mDk"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -46,21 +57,10 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jRQ-t4-i82" id="8t6-kD-SSr">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.15476757150000001" blue="0.18123706040000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="aa0-ZP-003" kind="show" id="mW2-Rh-hic"/>
                                         </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BMq-NS-Tpw">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BMq-NS-Tpw" id="CfK-T3-ezj">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fWe-Wf-QI8">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fWe-Wf-QI8" id="SLk-hs-oH4">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="1067" y="997"/>
         </scene>
-        <!--View Controller-->
+        <!--Middle View Controller-->
         <scene sceneID="dZj-cd-rh8">
             <objects>
-                <viewController id="aa0-ZP-003" sceneMemberID="viewController">
+                <viewController id="aa0-ZP-003" customClass="MiddleViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="S0u-q6-SRS"/>
                         <viewControllerLayoutGuide type="bottom" id="BMU-Zo-evl"/>
@@ -100,7 +100,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="presentation" id="po5-z7-22J"/>
+                                    <segue destination="vXZ-lx-hvc" kind="presentation" identifier="modal" id="po5-z7-22J"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ts-Th-aai">
@@ -113,13 +113,28 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9ZY-w6-NAm" kind="show" id="uZ3-nZ-g3A"/>
+                                    <segue destination="9ZY-w6-NAm" kind="show" identifier="push" id="uZ3-nZ-g3A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unu-gK-afY">
+                                <rect key="frame" x="250" y="220" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1gh-C7-re1"/>
+                                    <constraint firstAttribute="height" constant="30" id="Npp-BP-lAq"/>
+                                </constraints>
+                                <state key="normal" title="close">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="aa0-ZP-003" eventType="touchUpInside" id="w9K-uO-7Pi"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HrA-Ll-fPA" firstAttribute="top" secondItem="9ts-Th-aai" secondAttribute="bottom" constant="46" id="GBW-oK-ffD"/>
+                            <constraint firstItem="9ts-Th-aai" firstAttribute="top" secondItem="unu-gK-afY" secondAttribute="bottom" constant="42" id="WuY-xb-5rc"/>
+                            <constraint firstAttribute="centerX" secondItem="unu-gK-afY" secondAttribute="centerX" id="aII-kv-mec"/>
                             <constraint firstItem="9ts-Th-aai" firstAttribute="top" secondItem="S0u-q6-SRS" secondAttribute="bottom" constant="228" id="nwg-XE-1Ju"/>
                             <constraint firstAttribute="centerX" secondItem="HrA-Ll-fPA" secondAttribute="centerX" id="sRK-7F-aEt"/>
                             <constraint firstAttribute="centerX" secondItem="9ts-Th-aai" secondAttribute="centerX" id="uDr-Qe-38u"/>
@@ -131,10 +146,10 @@
             </objects>
             <point key="canvasLocation" x="1812" y="997"/>
         </scene>
-        <!--View Controller-->
+        <!--Push View Controller-->
         <scene sceneID="KQO-FR-x4k">
             <objects>
-                <viewController id="9ZY-w6-NAm" sceneMemberID="viewController">
+                <viewController id="9ZY-w6-NAm" customClass="PushViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kyq-V1-tzb"/>
                         <viewControllerLayoutGuide type="bottom" id="aDG-jl-wlB"/>
@@ -143,14 +158,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxA-gT-z95">
-                                <rect key="frame" x="242" y="354" width="78" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxA-gT-z95">
+                                <rect key="frame" x="261" y="285" width="78" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="bl7-W5-d45"/>
+                                    <constraint firstAttribute="height" constant="30" id="pUa-SR-nsK"/>
+                                </constraints>
                                 <state key="normal" title="push_close">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="close:" destination="9ZY-w6-NAm" eventType="touchUpInside" id="dHv-jS-iuj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="AxA-gT-z95" secondAttribute="centerX" id="Qqd-od-MSr"/>
+                            <constraint firstAttribute="centerY" secondItem="AxA-gT-z95" secondAttribute="centerY" id="Rfl-Sl-yoD"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Fh-IY-3yv" userLabel="First Responder" sceneMemberID="firstResponder"/>
