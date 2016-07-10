@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dqr-85-EDV">
+                                <rect key="frame" x="270" y="270" width="60" height="60"/>
+                                <color key="tintColor" red="1" green="0.15476757150000001" blue="0.18123706040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="AEG-rL-0f9"/>
+                                    <constraint firstAttribute="height" constant="60" id="ean-xs-SC1"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test.png" translatesAutoresizingMaskIntoConstraints="NO" id="i1b-OH-6Tg">
+                                <rect key="frame" x="270" y="202" width="60" height="60"/>
+                                <color key="tintColor" red="0.094117647060000004" green="0.44705882349999998" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="b4Q-Tl-qHB"/>
+                                    <constraint firstAttribute="height" constant="60" id="dOe-87-3Qx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test.png" translatesAutoresizingMaskIntoConstraints="NO" id="jHq-m1-qoF">
+                                <rect key="frame" x="338" y="202" width="60" height="60"/>
+                                <color key="tintColor" red="0.32639312929999997" green="1" blue="0.27293320879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="XRS-w9-JsB"/>
+                                    <constraint firstAttribute="height" constant="60" id="tF1-9n-y6g"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test.png" translatesAutoresizingMaskIntoConstraints="NO" id="JnF-FJ-Shh">
+                                <rect key="frame" x="338" y="270" width="60" height="60"/>
+                                <color key="tintColor" red="1" green="0.94960220740000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="1b8-DN-gEb"/>
+                                    <constraint firstAttribute="height" constant="60" id="ZVD-lN-njj"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jHq-m1-qoF" firstAttribute="leading" secondItem="JnF-FJ-Shh" secondAttribute="leading" id="4NS-P7-weT"/>
+                            <constraint firstItem="jHq-m1-qoF" firstAttribute="top" secondItem="i1b-OH-6Tg" secondAttribute="top" id="Nl9-MY-OUC"/>
+                            <constraint firstItem="Dqr-85-EDV" firstAttribute="top" secondItem="i1b-OH-6Tg" secondAttribute="bottom" constant="8" id="PAF-oS-2of"/>
+                            <constraint firstItem="jHq-m1-qoF" firstAttribute="leading" secondItem="i1b-OH-6Tg" secondAttribute="trailing" constant="8" id="Tg4-hG-GoU"/>
+                            <constraint firstAttribute="centerX" secondItem="Dqr-85-EDV" secondAttribute="centerX" id="V8F-PG-9PI"/>
+                            <constraint firstAttribute="centerY" secondItem="Dqr-85-EDV" secondAttribute="centerY" id="XN4-tD-uxe"/>
+                            <constraint firstItem="JnF-FJ-Shh" firstAttribute="leading" secondItem="Dqr-85-EDV" secondAttribute="trailing" constant="8" id="Ycv-1K-3OO"/>
+                            <constraint firstItem="jHq-m1-qoF" firstAttribute="leading" secondItem="i1b-OH-6Tg" secondAttribute="trailing" constant="8" id="fCn-ym-kxz"/>
+                            <constraint firstItem="JnF-FJ-Shh" firstAttribute="top" secondItem="jHq-m1-qoF" secondAttribute="bottom" constant="8" id="tPA-FG-J6z"/>
+                            <constraint firstItem="JnF-FJ-Shh" firstAttribute="top" secondItem="jHq-m1-qoF" secondAttribute="bottom" constant="8" id="uhp-hZ-IhI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="Dqr-85-EDV" id="uaO-uu-yw2"/>
+                        <outlet property="image2" destination="i1b-OH-6Tg" id="cDT-bQ-Ede"/>
+                        <outlet property="image3" destination="jHq-m1-qoF" id="p9B-uM-5SL"/>
+                        <outlet property="image4" destination="JnF-FJ-Shh" id="aoY-0u-6Mt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="test.png" width="348" height="306"/>
+    </resources>
+</document>
