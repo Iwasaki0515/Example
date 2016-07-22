@@ -97,6 +97,7 @@
 		EC3FC4331D419ECD006A76C3 /* NonTinderUI */ = {
 			isa = PBXGroup;
 			children = (
+				EC44B6261D424C0600977DF1 /* 画像 */,
 				EC3FC4341D419ECD006A76C3 /* AppDelegate.swift */,
 				EC3FC4361D419ECD006A76C3 /* ViewController.swift */,
 				EC3FC4381D419ECD006A76C3 /* Main.storyboard */,
@@ -123,6 +124,13 @@
 				EC3FC4561D419ECD006A76C3 /* Info.plist */,
 			);
 			path = NonTinderUIUITests;
+			sourceTree = "<group>";
+		};
+		EC44B6261D424C0600977DF1 /* 画像 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "画像";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -482,6 +490,7 @@
 				EC3FC45B1D419ECD006A76C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC3FC45C1D419ECD006A76C3 /* Build configuration list for PBXNativeTarget "NonTinderUITests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +499,7 @@
 				EC3FC45E1D419ECD006A76C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC3FC45F1D419ECD006A76C3 /* Build configuration list for PBXNativeTarget "NonTinderUIUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +508,7 @@
 				EC3FC4611D419ECD006A76C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
