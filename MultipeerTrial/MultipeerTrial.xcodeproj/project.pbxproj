@@ -1,0 +1,353 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F53D6F91D445D4E00521AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53D6F81D445D4E00521AAD /* AppDelegate.swift */; };
+		2F53D6FB1D445D4E00521AAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53D6FA1D445D4E00521AAD /* ViewController.swift */; };
+		2F53D6FE1D445D4E00521AAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F53D6FC1D445D4E00521AAD /* Main.storyboard */; };
+		2F53D7001D445D4E00521AAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F53D6FF1D445D4E00521AAD /* Assets.xcassets */; };
+		2F53D7031D445D4E00521AAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F53D7011D445D4E00521AAD /* LaunchScreen.storyboard */; };
+		2F53D70B1D44978D00521AAD /* RxMultipeer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F53D70A1D44978D00521AAD /* RxMultipeer.framework */; };
+		2F53D7101D4497AF00521AAD /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F53D70C1D4497AF00521AAD /* RxBlocking.framework */; };
+		2F53D7111D4497AF00521AAD /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F53D70D1D4497AF00521AAD /* RxCocoa.framework */; };
+		2F53D7121D4497AF00521AAD /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F53D70E1D4497AF00521AAD /* RxSwift.framework */; };
+		2F53D7161D4499A400521AAD /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F53D7151D4499A400521AAD /* MultipeerConnectivity.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2F53D6F51D445D4E00521AAD /* MultipeerTrial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipeerTrial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F53D6F81D445D4E00521AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2F53D6FA1D445D4E00521AAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2F53D6FD1D445D4E00521AAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2F53D6FF1D445D4E00521AAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F53D7021D445D4E00521AAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2F53D7041D445D4E00521AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F53D70A1D44978D00521AAD /* RxMultipeer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMultipeer.framework; path = Carthage/Build/iOS/RxMultipeer.framework; sourceTree = "<group>"; };
+		2F53D70C1D4497AF00521AAD /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		2F53D70D1D4497AF00521AAD /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		2F53D70E1D4497AF00521AAD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		2F53D70F1D4497AF00521AAD /* RxTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTests.framework; path = Carthage/Build/iOS/RxTests.framework; sourceTree = "<group>"; };
+		2F53D7151D4499A400521AAD /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F53D6F21D445D4E00521AAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F53D7161D4499A400521AAD /* MultipeerConnectivity.framework in Frameworks */,
+				2F53D7101D4497AF00521AAD /* RxBlocking.framework in Frameworks */,
+				2F53D7111D4497AF00521AAD /* RxCocoa.framework in Frameworks */,
+				2F53D7121D4497AF00521AAD /* RxSwift.framework in Frameworks */,
+				2F53D70B1D44978D00521AAD /* RxMultipeer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F53D6EC1D445D4E00521AAD = {
+			isa = PBXGroup;
+			children = (
+				2F53D7171D449EE600521AAD /* frameworks */,
+				2F53D6F71D445D4E00521AAD /* MultipeerTrial */,
+				2F53D6F61D445D4E00521AAD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2F53D6F61D445D4E00521AAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F53D6F51D445D4E00521AAD /* MultipeerTrial.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F53D6F71D445D4E00521AAD /* MultipeerTrial */ = {
+			isa = PBXGroup;
+			children = (
+				2F53D6F81D445D4E00521AAD /* AppDelegate.swift */,
+				2F53D6FA1D445D4E00521AAD /* ViewController.swift */,
+				2F53D6FC1D445D4E00521AAD /* Main.storyboard */,
+				2F53D6FF1D445D4E00521AAD /* Assets.xcassets */,
+				2F53D7011D445D4E00521AAD /* LaunchScreen.storyboard */,
+				2F53D7041D445D4E00521AAD /* Info.plist */,
+			);
+			path = MultipeerTrial;
+			sourceTree = "<group>";
+		};
+		2F53D7171D449EE600521AAD /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F53D7151D4499A400521AAD /* MultipeerConnectivity.framework */,
+				2F53D70C1D4497AF00521AAD /* RxBlocking.framework */,
+				2F53D70D1D4497AF00521AAD /* RxCocoa.framework */,
+				2F53D70E1D4497AF00521AAD /* RxSwift.framework */,
+				2F53D70F1D4497AF00521AAD /* RxTests.framework */,
+				2F53D70A1D44978D00521AAD /* RxMultipeer.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F53D6F41D445D4E00521AAD /* MultipeerTrial */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F53D7071D445D4E00521AAD /* Build configuration list for PBXNativeTarget "MultipeerTrial" */;
+			buildPhases = (
+				2F53D6F11D445D4E00521AAD /* Sources */,
+				2F53D6F21D445D4E00521AAD /* Frameworks */,
+				2F53D6F31D445D4E00521AAD /* Resources */,
+				2F53D7141D4498E100521AAD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultipeerTrial;
+			productName = MultipeerTrial;
+			productReference = 2F53D6F51D445D4E00521AAD /* MultipeerTrial.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F53D6ED1D445D4E00521AAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = colorboxstudio;
+				TargetAttributes = {
+					2F53D6F41D445D4E00521AAD = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 2F53D6F01D445D4E00521AAD /* Build configuration list for PBXProject "MultipeerTrial" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2F53D6EC1D445D4E00521AAD;
+			productRefGroup = 2F53D6F61D445D4E00521AAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F53D6F41D445D4E00521AAD /* MultipeerTrial */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F53D6F31D445D4E00521AAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F53D7031D445D4E00521AAD /* LaunchScreen.storyboard in Resources */,
+				2F53D7001D445D4E00521AAD /* Assets.xcassets in Resources */,
+				2F53D6FE1D445D4E00521AAD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F53D7141D4498E100521AAD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxMultipeer.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F53D6F11D445D4E00521AAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F53D6FB1D445D4E00521AAD /* ViewController.swift in Sources */,
+				2F53D6F91D445D4E00521AAD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2F53D6FC1D445D4E00521AAD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F53D6FD1D445D4E00521AAD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2F53D7011D445D4E00521AAD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F53D7021D445D4E00521AAD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2F53D7051D445D4E00521AAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2F53D7061D445D4E00521AAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2F53D7081D445D4E00521AAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = MultipeerTrial/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.colorboxstudio.MultipeerTrial;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2F53D7091D445D4E00521AAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = MultipeerTrial/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.colorboxstudio.MultipeerTrial;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F53D6F01D445D4E00521AAD /* Build configuration list for PBXProject "MultipeerTrial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F53D7051D445D4E00521AAD /* Debug */,
+				2F53D7061D445D4E00521AAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F53D7071D445D4E00521AAD /* Build configuration list for PBXNativeTarget "MultipeerTrial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F53D7081D445D4E00521AAD /* Debug */,
+				2F53D7091D445D4E00521AAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2F53D6ED1D445D4E00521AAD /* Project object */;
+}
