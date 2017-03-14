@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Color Switch View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ColorSwitchViewController" customModule="MultipeerTrial" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okV-Yh-lSp">
+                                <rect key="frame" x="137" y="283.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="KHe-3M-HOc"/>
+                                    <constraint firstAttribute="width" constant="100" id="soF-Ru-VQh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6r-8U-gZa">
+                                <rect key="frame" x="137" y="403.5" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="3f0-wQ-h7g"/>
+                                    <constraint firstAttribute="height" constant="40" id="MGb-z2-6el"/>
+                                </constraints>
+                                <state key="normal" title="red"/>
+                                <connections>
+                                    <action selector="redTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ab6-av-xw7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jn9-ES-T9O">
+                                <rect key="frame" x="137.5" y="463.5" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RVX-Ub-WJa"/>
+                                    <constraint firstAttribute="width" constant="100" id="nYE-0i-GEL"/>
+                                </constraints>
+                                <state key="normal" title="yellow"/>
+                                <connections>
+                                    <action selector="yellowTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="GF7-b0-kGQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="a6r-8U-gZa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lj0-Wp-fwp"/>
+                            <constraint firstItem="okV-Yh-lSp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ezT-ML-nfZ"/>
+                            <constraint firstItem="Jn9-ES-T9O" firstAttribute="top" secondItem="a6r-8U-gZa" secondAttribute="bottom" constant="20" id="iBF-EK-KKY"/>
+                            <constraint firstItem="Jn9-ES-T9O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ioI-Uv-RDL"/>
+                            <constraint firstItem="a6r-8U-gZa" firstAttribute="top" secondItem="okV-Yh-lSp" secondAttribute="bottom" constant="20" id="lCN-ep-8nT"/>
+                            <constraint firstItem="okV-Yh-lSp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nNy-Yz-dWy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="connectionsLabel" destination="okV-Yh-lSp" id="CNJ-8r-v0y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
