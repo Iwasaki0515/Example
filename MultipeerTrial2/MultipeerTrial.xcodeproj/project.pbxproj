@@ -112,6 +112,7 @@
 					E0CB36A71E6833B700A61CFF = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 8NY8PHM374;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -318,6 +319,7 @@
 				E0CB36BC1E6833B700A61CFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

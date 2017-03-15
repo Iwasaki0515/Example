@@ -3,20 +3,22 @@ import MultipeerConnectivity
 
 protocol ColorServiceManagerDelegate {
 
-    func connectedDevicesChanged(manager : ColorServiceManager, connectedDevices: [String])
-    func colorChanged(manager : ColorServiceManager, colorString: String)
+    func connectedDevicesChanged(_ manager : ColorServiceManager, connectedDevices: [String])
+    func colorChanged(_ manager : ColorServiceManager, colorString: String)
+    func numberSelected(_ manager : ColorServiceManager, number: Int)
+    func gameInit(_ manager : ColorServiceManager, numbers: [Int])
 
 }
 
 class ColorServiceManager : NSObject {
 
-    private let ColorServiceType = "example-color"
+    fileprivate let ColorServiceType = "example-color"
 
-    private let myPeerId = MCPeerID(displayName: UIDevice.current.name)
+    fileprivate let myPeerId = MCPeerID(displayName: UIDevice.current.name)
 
-    private let serviceAdvertiser : MCNearbyServiceAdvertiser
+    fileprivate let serviceAdvertiser : MCNearbyServiceAdvertiser
 
-    private let serviceBrowser : MCNearbyServiceBrowser
+    fileprivate let serviceBrowser : MCNearbyServiceBrowser
 
     var delegate : ColorServiceManagerDelegate?
 
@@ -44,13 +46,26 @@ class ColorServiceManager : NSObject {
         self.serviceAdvertiser.stopAdvertisingPeer()
         self.serviceBrowser.stopBrowsingForPeers()
     }
+    
+    func send(_ treasureCards : [Int]) {
+        
+        let stringRepresentation = treasureCards.map{"\($0)"}.joined(separator: "-")
+        
+        if session.connectedPeers.count > 0 {
+            do {
+                try self.session.send( "1,\(stringRepresentation)".data(using: .utf8)!, toPeers: session.connectedPeers, with: .reliable)
+            }
+            catch let error {
+                NSLog("%@", "Error for sending: \(error)")
+            }
+        }
+    }
 
-    func send(colorName : String) {
-        NSLog("%@", "sendColor: \(colorName) to \(session.connectedPeers.count) peers")
+    func sendNumber(_ number : Int) {
 
         if session.connectedPeers.count > 0 {
             do {
-                try self.session.send(colorName.data(using: .utf8)!, toPeers: session.connectedPeers, with: .reliable)
+                try self.session.send( "0,\(number)".data(using: .utf8)!, toPeers: session.connectedPeers, with: .reliable)
             }
             catch let error {
                 NSLog("%@", "Error for sending: \(error)")
@@ -95,14 +110,20 @@ extension ColorServiceManager : MCSessionDelegate {
 
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         NSLog("%@", "peer \(peerID) didChangeState: \(state)")
-        self.delegate?.connectedDevicesChanged(manager: self, connectedDevices:
+        self.delegate?.connectedDevicesChanged(self, connectedDevices:
             session.connectedPeers.map{$0.displayName})
     }
 
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         NSLog("%@", "didReceiveData: \(data)")
         let str = String(data: data, encoding: .utf8)!
-        self.delegate?.colorChanged(manager: self, colorString: str)
+        let arr = str.components(separatedBy: ",")
+        if arr[0] == "0" {
+            self.delegate?.numberSelected(self, number: Int(arr[1])!)
+        }
+        if arr[0] == "1" {
+            self.delegate?.gameInit(self, numbers: arr[1].components(separatedBy:"-").map{Int($0)!})
+        }
     }
 
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
